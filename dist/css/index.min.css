@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Roboto - 400.woff2") format("woff2"), url("../fonts/Roboto - 400.woff") format("woff");
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl92YXIuc2NzcyIsImluZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0U7RUFFSSxhQ0hRO0VESVIsYUNKZ0I7RURLaEI7RUFFRiIsImZpbGUiOiJpbmRleC5taW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJGNvbG9yLW1haW46ICMwMDAwMDA7XHJcblxyXG5AbWl4aW4gZm9udCgkbmFtZSwgJHdlaWdodCkge1xyXG4gIEBmb250LWZhY2Uge1xyXG4gICAgZm9udDoge1xyXG4gICAgICBmYW1pbHk6ICRuYW1lO1xyXG4gICAgICB3ZWlnaHQ6ICR3ZWlnaHQ7XHJcbiAgICAgIGRpc3BsYXk6IHN3YXA7XHJcbiAgICB9XHJcbiAgICBzcmM6IHVybChcIi4uL2ZvbnRzLyN7ICRuYW1lIH0gLSAjeyAkd2VpZ2h0IH0ud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksXHJcbiAgICAgIHVybChcIi4uL2ZvbnRzLyN7ICRuYW1lIH0gLSAjeyAkd2VpZ2h0IH0ud29mZlwiKSBmb3JtYXQoXCJ3b2ZmXCIpO1xyXG4gIH1cclxufVxyXG4iLCJAdXNlIFwiLi92YXJcIiBhcyAqO1xyXG5cclxuQGluY2x1ZGUgZm9udChSb2JvdG8sIDQwMCk7XHJcbiJdfQ== */
