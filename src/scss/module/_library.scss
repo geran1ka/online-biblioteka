@@ -1,0 +1,119 @@
+@use "../variables" as *;
+
+.library {
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__titles {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__count {
+    font-weight: 400;
+    font-size: 14px;
+    color: $secondary;
+    margin-bottom: 25px;
+  }
+
+  &__fields {
+  }
+
+  &__list-container {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 26px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__add-btn {
+  }
+}
+
+.header {
+  &__container {
+  }
+
+  &__logo {
+  }
+
+  &__btn-add {
+  }
+
+  &__btn {
+    &_search {
+    }
+  }
+}
+
+.fields {
+  &__block {
+  }
+
+  &__btn {
+    &_sort {
+    }
+
+    &_filter {
+    }
+  }
+
+  &__text {
+  }
+
+  &__list {
+    &_sort {
+    }
+
+    &_filter {
+    }
+  }
+
+  &__item {
+  }
+}
+
+.cart {
+  &__wrapper {
+  }
+
+  &__img {
+  }
+
+  &__label {
+  }
+
+  &__content {
+  }
+
+  &__title {
+  }
+
+  &__author {
+  }
+
+  &__description {
+  }
+
+  &__rating {
+    display: flex;
+  }
+
+  &__rating-star {
+  }
+}
