@@ -1,0 +1,82 @@
+@use "../variables" as *;
+
+.fields {
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.3;
+    color: $light;
+    background-color: transparent;
+    border: 0;
+    transition: color $transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__btn_sort {
+  }
+
+  &__btn_filter {
+  }
+
+  &__text {
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 3px);
+    width: max-content;
+    background-color: $light;
+    color: $dark;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+
+    &_active {
+      display: block;
+    }
+  }
+
+  &__list_sort {
+    left: 0;
+    @media (max-width: 375px) {
+      left: -8px;
+    }
+  }
+
+  &__list_filter {
+    right: 0;
+    @media (max-width: 375px) {
+      right: -8px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    background-color: $secondary;
+    border-radius: 16px;
+    border: 0;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,101 @@
+@use "../variables" as *;
+
+.book {
+  max-height: 640px;
+  height: 100%;
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__caontainer {
+    position: relative;
+  }
+
+  &__wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    margin: 0 auto;
+    border-radius: 6px;
+    max-width: 168px;
+    max-height: 250px;
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    max-width: 320px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 18px;
+    background-color: $light;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 26px;
+    color: $light;
+  }
+
+  &__author {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $primary-dark;
+  }
+
+  &__rating {
+    display: flex;
+  }
+
+  &__rating-star {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    color: $light;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.3;
+    color: $light;
+    overflow: hidden;
+    max-height: 92px;
+  }
+}
+
+.header {
+  &__container {
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_back {
+    }
+
+    &_delete {
+    }
+  }
+}
+.container {
+}

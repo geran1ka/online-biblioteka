@@ -84,6 +84,10 @@ iframe {
   border: none;
 }
 
+section {
+  padding-bottom: 84px;
+}
+
 /*
 Доступно скрываю элементы
 */
@@ -106,6 +110,14 @@ iframe {
   max-width: 1100px;
   padding: 0 20px;
   margin: 0 auto;
+
+  @include tablet {
+    padding: 0 35px;
+  }
+
+  @include laptop {
+    padding: 0 45px;
+  }
 }
 
 .hidden {

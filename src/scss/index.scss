@@ -1,10 +1,13 @@
-@use "./mixin" as *;
-@use "./module/header" as *;
-@use "./module/library" as *;
-
-@use "./module/footer" as *;
-
 @import "normalize";
 
 @include normalize();
 @import "base";
+
+@import "./mixin";
+@import "./module/header";
+@import "./module/footer";
+@import "./module/library";
+@import "./module/cart";
+@import "./module/fields";
+
+@import "./module/book";
