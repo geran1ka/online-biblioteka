@@ -27,6 +27,9 @@
   }
 
   &__list-container {
+    @media (max-width: 375px) {
+      padding: 0 12px;
+    }
   }
 
   &__list {
@@ -85,35 +88,5 @@
   }
 
   &__item {
-  }
-}
-
-.cart {
-  &__wrapper {
-  }
-
-  &__img {
-  }
-
-  &__label {
-  }
-
-  &__content {
-  }
-
-  &__title {
-  }
-
-  &__author {
-  }
-
-  &__description {
-  }
-
-  &__rating {
-    display: flex;
-  }
-
-  &__rating-star {
   }
 }
