@@ -8,10 +8,8 @@ const addBtns = document.querySelectorAll(
 );
 const backBtns = document.querySelectorAll(".header__btn_back");
 const btnsSearch = document.querySelectorAll(".header__btn_search");
-console.log("btnsSearch: ", btnsSearch);
 const search = document.querySelector(".search");
-console.log("search: ", search);
-
+const searchClose = document.querySelector(".search__close");
 const router = new Navigo("/", {
   hash: true,
 });
@@ -64,4 +62,8 @@ btnsSearch.forEach((btn) => {
     search.classList.add("search_active");
     document.body.addEventListener("click", closeSearch);
   });
+});
+
+searchClose.addEventListener("click", () => {
+  search.classList.remove("search_active");
 });
