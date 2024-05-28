@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .header {
   padding: 8px 0;
 
@@ -17,7 +19,7 @@
 
   &__logo {
     height: 40px;
-
+    margin-right: auto;
     @include laptop {
       height: 66px;
       width: 66px;
@@ -26,19 +28,60 @@
 
   &__btn-add {
     display: none;
+
+    @include laptop {
+      display: block;
+      margin-right: 102px;
+      border-radius: 8px;
+      padding: 10px;
+      width: 320px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      text-align: center;
+      color: $light;
+      background-color: $primary;
+      border: 0;
+    }
   }
 
   &__btn {
     width: 40px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  &__btn_search {
-    background-image: url("../../img/search.svg");
-    background-repeat: no-repeat;
-    background-size: 24px;
-    background-position: center;
-    background-color: transparent;
+  &__btn_search,
+  &__btn_back,
+  &__btn_delete {
+    color: $light;
     border: 0;
+    transition: color $transition;
+  }
+
+  // &__btn_search {
+  // }
+
+  &__btn_back {
+    justify-content: start;
+  }
+
+  &__btn_delete {
+    justify-content: end;
+  }
+
+  &__btn_search:hover,
+  &__btn_back:hover,
+  &__btn_delete:hover {
+    color: $primary;
+  }
+
+  &__btn_search:focus-visible,
+  &__btn_back:focus-visible,
+  &__btn_delete:focus-visible {
+    outline-color: $primary;
   }
 }

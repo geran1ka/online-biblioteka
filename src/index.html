@@ -23,7 +23,11 @@
           <button
             class="header__btn header__btn_search"
             aria-label="найти книгу"
-          ></button>
+          >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+            </svg>
+        </button>
         </div>
       </header>
 
@@ -96,7 +100,7 @@
       </div>
 
       <div class="container library__list-container">
-        <h2 class="visually-hiddden">Список книг</h2>
+        <h2 class="visually-hidden">Список книг</h2>
         <ul class="library__list">
           <li class="library__item">
             <a href="/book" class="library__link" data-navigo>
@@ -224,17 +228,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_19_663)">
-                <path
-                  d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_19_663">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
+            <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="currentColor"/>
             </svg>
           </button>
 
@@ -246,17 +240,11 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_19_702)">
                 <path
                   d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
-                  fill="#EAEAEA"
+                  fill="currentColor"
                 />
-              </g>
-              <defs>
-                <clipPath id="clip0_19_702">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
+
             </svg>
           </button>
         </div>
@@ -366,25 +354,10 @@
           </button>
 
           <button class="header__btn header__btn_search">
-            <!-- <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_31_847)">
-                <path
-                  d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_31_847">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg> -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+              </svg>
+              
           </button>
         </div>
       </header>
@@ -539,5 +512,21 @@
         </div>
       </form>
     </section>
+
+    <div class="search">
+      <div class="container">
+      <form class="search__form">
+        <label>
+          <input class="search__input" type="search" name="" id="">
+        </label>
+        <button class="search__btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+          </svg>
+            
+        </button>
+      </form>
+    </div>
+    </div>
   </body>
 </html>

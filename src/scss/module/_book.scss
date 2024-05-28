@@ -4,10 +4,10 @@
   max-height: 640px;
   height: 100%;
   &__header {
-    margin-bottom: 24px;
   }
 
   &__caontainer {
+    padding-top: 16px;
     position: relative;
   }
 
@@ -23,6 +23,7 @@
   }
 
   &__label {
+    display: none;
     position: absolute;
     bottom: 0;
     transform: translateY(100%);
@@ -80,22 +81,4 @@
     overflow: hidden;
     max-height: 92px;
   }
-}
-
-.header {
-  &__container {
-  }
-
-  &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &_back {
-    }
-
-    &_delete {
-    }
-  }
-}
-.container {
 }

@@ -1,0 +1,52 @@
+@use "../variables" as *;
+
+.search {
+  $height: 40px;
+  $top: 8px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: -$top - $height;
+  transition: transform $transition;
+
+  &_active {
+    transform: translateY($top * 2 + $height);
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: $height;
+    padding: 3px 40px 3px 15px;
+    border-radius: 20px;
+    background-color: $light;
+    border: 0;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    transition: outline-color $transition;
+
+    &:focus-visible {
+      outline-color: $secondary-dark;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 0;
+    color: $dark;
+    transition: color $transition;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
