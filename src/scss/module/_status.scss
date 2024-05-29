@@ -1,0 +1,47 @@
+@use "../variables" as *;
+
+.status {
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__radio {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__label {
+    display: inline-block;
+    border-radius: 16px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    color: $dark;
+    background-color: $light;
+    outline: 1px solid transparent;
+    transition: background-color $transition, outline-color $transition;
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+  &__radio:focus + &__label {
+    outline-color: $secondary-dark;
+  }
+
+  &__radio:active + &__label {
+    outline-color: $primary;
+  }
+
+  &__radio:checked + &__label {
+    outline-color: $primary;
+    background-color: $primary;
+  }
+}

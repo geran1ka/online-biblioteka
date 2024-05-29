@@ -1,0 +1,82 @@
+@use "../variables" as *;
+.add {
+  &__header {
+  }
+
+  &__form {
+    padding: 14px 0;
+  }
+
+  &__container {
+    @include mobile {
+      padding: 0 12px;
+    }
+  }
+
+  &__fieldset {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    color: $light;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  &__step {
+    font-size: 14px;
+    line-height: 1;
+    color: $secondary;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: $light;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    background-color: $light;
+    width: 100%;
+    height: 70px;
+    padding: 8px;
+    font-size: 18px;
+
+    &_area {
+      margin-bottom: 0;
+
+      min-height: 120px;
+      resize: none;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 10px;
+    color: $light;
+    background-color: $primary;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    height: 50px;
+    max-width: 320px;
+    width: 100%;
+  }
+}
