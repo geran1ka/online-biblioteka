@@ -96,16 +96,59 @@ controlField(fieldsfBtnFilter, fieldsListFilter, fieldsListSort);
 const changeFieldset = () => {
   const fieldsets = document.querySelectorAll(".add__fieldset");
   const addBtn = document.querySelector(".add__btn");
+  const form = document.querySelector(".add__form");
+  const btnBackStep = document.querySelector(".add__btn_back-step");
 
   let count = 0;
 
   addBtn.addEventListener("click", ({ target }) => {
     const fieldset = fieldsets[count];
-    count += 1;
+    let valid = true;
 
-    fieldset.classList.add("hidden");
+    for (const elem of fieldset.elements) {
+      if (!elem.checkValidity()) {
+        elem.classList.add("no-validate");
+        valid = false;
+      } else {
+        elem.classList.remove("no-validate");
+      }
+    }
 
-    fieldsets[count].classList.remove("hidden");
+    if (valid) {
+      count += 1;
+
+      if (count === fieldsets.length - 1) {
+        addBtn.textContent = "Добавить книгу";
+      }
+
+      if (count >= fieldsets.length) {
+        const data = true; // данные с сервера
+        if (!data.error) {
+          form.reset();
+          router.navigate("/");
+          count = 0;
+          addBtn.textContent = "Далее";
+        }
+      }
+
+      fieldset.classList.add("hidden");
+      fieldsets[count].classList.remove("hidden");
+    }
+  });
+
+  btnBackStep.addEventListener("click", () => {
+    if (count > 0) {
+      fieldsets[count].classList.add("hidden");
+      count -= 1;
+      fieldsets[count].classList.remove("hidden");
+      console.log(count);
+      if (count === fieldsets.length - 2) {
+        addBtn.textContent = "Далее";
+      }
+    } else {
+      form.reset();
+      router.navigate("/");
+    }
   });
 };
 

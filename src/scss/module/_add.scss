@@ -5,11 +5,27 @@
 
   &__form {
     padding: 14px 0;
+
+    @include tablet {
+      padding: 7px 0;
+    }
+
+    @include laptop {
+      padding: 31px 0;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
   }
 
   &__container {
     @include mobile {
       padding: 0 12px;
+    }
+
+    @include laptop {
+      max-width: 698px;
     }
   }
 
@@ -21,6 +37,10 @@
     font-size: 26px;
     color: $light;
     margin-bottom: 8px;
+
+    @include laptop {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {
@@ -35,6 +55,15 @@
     line-height: 1;
     color: $secondary;
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include laptop {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
   }
 
   &__label {
@@ -45,6 +74,14 @@
     font-size: 14px;
     line-height: 1;
     color: $light;
+
+    @include tablet {
+      padding-left: 16px;
+    }
+
+    @include laptop {
+      font-size: 14px;
+    }
   }
 
   &__text {
@@ -78,5 +115,11 @@
     height: 50px;
     max-width: 320px;
     width: 100%;
+  }
+
+  &__footer {
+    // @include tablet {
+    //   background-color: transparent;
+    // }
   }
 }

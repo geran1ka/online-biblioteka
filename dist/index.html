@@ -303,7 +303,7 @@
       <h2 class="visually-hidden">Форма для добавления книги</h2>
       <header class="header add__header">
         <div class="container header__container">
-          <button class="header__btn header__btn_back">
+          <button class="header__btn add__btn_back-step">
             <svg
               width="24"
               height="24"
@@ -342,16 +342,17 @@
             <p class="add__step">шаг 1/3</p>
 
             <label for="title" class="add__label">Название</label>
-            <input class="add__text" type="text" name="title" id="title" />
+            <input class="add__text" type="text" name="title" id="title" required/>
 
             <label for="author" class="add__label">Автор</label>
-            <input class="add__text" type="text" name="author" id="author" />
+            <input class="add__text" type="text" name="author" id="author" required/>
 
             <label for="description" class="add__label">Описание</label>
             <textarea
               class="add__text add__text_area"
               name="description"
-              id="description"
+              id="description" 
+              required
             ></textarea>
           </fieldset>
 
@@ -390,6 +391,7 @@
                     name="label"
                     id="wish"
                     value="wish"
+                    required
                   />
                   <label class="status__label" for="wish">хочу прочитать</label>
                 </li>
@@ -431,7 +433,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="star hidden">
+            <fieldset class="star ">
               <legend class="add__subtitle">Поставьте оценку</legend>
 
               <div class="star__list">
@@ -441,6 +443,7 @@
                   name="rating"
                   id="star-rating-5"
                   value="5"
+                  required
                 />
                 <label class="star__icon" for="star-rating-5"></label>
 
@@ -476,10 +479,11 @@
                 <label class="star__icon" for="star-rating-1"></label>
               </div>
             </fieldset>
+
           </fieldset>
 
-          <div class="footer ">
-            <button class="footer__btn add__btn" type="button" data-count-fieldset="0">Далее</button>
+          <div class="footer add__footer ">
+            <button class="footer__btn add__btn" type="button">Далее</button>
           </div>
         </div>
       </form>
