@@ -11,6 +11,13 @@
     background-image: url("/img/upload.jpg");
     border-radius: 6px;
     cursor: pointer;
+
+    &_active {
+      background-image: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__preview {

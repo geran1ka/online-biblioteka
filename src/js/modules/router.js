@@ -1,4 +1,6 @@
 import Navigo from "navigo";
+import { renderListBooks } from "./renderListBooks.js";
+import { renderBook } from "./renderBook.js";
 
 const library = document.querySelector(".library");
 const book = document.querySelector(".book");
@@ -25,11 +27,13 @@ export const initRouter = () => {
         closeAllPage();
         library.classList.remove("hidden");
         document.body.classList.remove("body_gradient");
+        renderListBooks();
       },
-      book: () => {
+      book: ({ params: { id } }) => {
         closeAllPage();
         book.classList.remove("hidden");
         document.body.classList.add("body_gradient");
+        renderBook(id);
       },
       add: () => {
         closeAllPage();
