@@ -108,6 +108,7 @@
     padding: 10px;
     color: $light;
     background-color: $primary;
+    border: 1px solid transparent;
     font-weight: 500;
     font-size: 14px;
     line-height: 1;
@@ -115,6 +116,10 @@
     height: 50px;
     max-width: 320px;
     width: 100%;
+
+    &:focus-visible {
+      border-color: $light;
+    }
   }
 
   &__footer {

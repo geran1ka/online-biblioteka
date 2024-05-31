@@ -63,25 +63,6 @@ const getStars = (rating, className) => {
   }
   return stars;
 };
-const getStarsAlt = (rating, className) => {
-  const stars = [];
-  for (let i = 0; i < 5; i++) {
-    if (i === 0) {
-      stars.push(`
-        <img
-        class="${className}"
-        src="img/star.svg"
-        alt="Рейтинг ${rating} из 5"
-      />
-    `);
-    } else if (i < rating) {
-      stars.push(`<img class="${className}" src="img/star.svg" />`);
-    } else {
-      stars.push(`<img class="${className}" src="img/star-o.svg" />`);
-    }
-  }
-  return stars;
-};
 ;// CONCATENATED MODULE: ./src/js/modules/serviceBook.js
 const API_URL = "http://localhost:3024/";
 const getBooks = async id => {
@@ -168,25 +149,21 @@ const renderListBooks = async () => {
 
 const bookContainer = document.querySelector(".book__container");
 const bookLabelFooter = document.querySelector(".footer__btn.book__label");
-const btnDelete = document.querySelector(".header__btn_delete");
-const renderBook = async id => {
+const renderBook = async idBooks => {
   const [{
     author,
     description,
+    id,
     image,
     label,
     rating,
     title
-  }, labels] = await Promise.all([getBooks(id), getLabels()]);
+  }, labels] = await Promise.all([getBooks(idBooks), getLabels()]);
   bookContainer.textContent = "";
-  const btnLabel = document.createElement("button");
-  btnLabel.className = "book__label book__label_img";
-  btnLabel.textContent = labels[label];
-  btnLabel.dataset.label = label;
   bookContainer.innerHTML = `
     <div class="book__wrapper">
       <img class="book__img" src="${API_URL}${image}" alt="Обложка книги ${title}" />
-      ${btnLabel.outerHTML}
+      <button class="book__label book__label_img">${labels[label]}</button>
     </div>
 
     <div class="book__content">
@@ -204,8 +181,6 @@ const renderBook = async id => {
       </p>
     </div>
   `;
-  btnDelete.dataset.id = id;
-  bookLabelFooter.dataset.label = label;
   bookLabelFooter.textContent = labels[label];
 };
 ;// CONCATENATED MODULE: ./src/js/modules/router.js
@@ -217,7 +192,7 @@ const book = document.querySelector(".book");
 const add = document.querySelector(".add");
 const addBtns = document.querySelectorAll(".header__btn-add, .library__add-btn");
 const backBtn = document.querySelector(".book__btn_back");
-const router = new navigo_min(location.pathname, {
+const router = new navigo_min("/", {
   hash: true
 });
 const closeAllPage = () => {
@@ -227,13 +202,13 @@ const closeAllPage = () => {
 };
 const initRouter = () => {
   router.on({
-    [location.pathname]: () => {
+    "/": () => {
       closeAllPage();
       library.classList.remove("hidden");
       document.body.classList.remove("body_gradient");
       renderListBooks();
     },
-    [location.pathname + "book"]: ({
+    book: ({
       params: {
         id
       }
@@ -243,7 +218,7 @@ const initRouter = () => {
       document.body.classList.add("body_gradient");
       renderBook(id);
     },
-    [location.pathname + "add"]: () => {
+    add: () => {
       closeAllPage();
       add.classList.remove("hidden");
       document.body.classList.add("body_gradient");

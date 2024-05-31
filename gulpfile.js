@@ -41,7 +41,7 @@ let dev = false;
 const path = {
   dist: {
     base: "dist/",
-    html: "dist/",
+    html: "dist/*.html",
     js: "dist/js/",
     css: "dist/css/",
     cssIndex: "dist/css/index.min.css",
@@ -89,7 +89,7 @@ export const html = () =>
         })
       )
     )
-    .pipe(gulp.dest(path.dist.html))
+    .pipe(gulp.dest(path.dist.base))
     .pipe(browserSync.stream());
 
 //pug
@@ -155,6 +155,20 @@ export const scss = () =>
     .pipe(gulp.dest(path.dist.css))
     .pipe(browserSync.stream());
 
+export const critCSS = () =>
+  gulp
+    .src(path.dist.html)
+    .pipe(
+      critical({
+        base: path.dist.base,
+        inline: true,
+        css: [path.dist.cssIndex],
+      })
+    )
+    .on("error", (err) => {
+      console.error(err.message);
+    })
+    .pipe(gulp.dest(path.dist.base));
 // js
 
 const webpackConf = {
@@ -279,21 +293,6 @@ export const avif = () =>
         once: true,
       })
     );
-
-export const critCSS = () =>
-  gulp
-    .src(path.src.html)
-    .pipe(
-      critical({
-        base: path.dist.base,
-        inline: true,
-        css: [path.dist.cssIndex],
-      })
-    )
-    .on("error", (err) => {
-      console.error(err.message);
-    })
-    .pipe(gulp.dest(path.dist.base));
 
 export const copy = () =>
   gulp
