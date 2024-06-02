@@ -18,7 +18,7 @@
     }
   }
 
-  &__caontainer {
+  &__container {
     @include laptop {
       display: grid;
       grid-template-columns: 3fr 5fr;
@@ -35,7 +35,7 @@
     width: 168px;
     margin-bottom: 20px;
 
-    @include mobile {
+    @include tablet {
       width: 300px;
       margin-bottom: 30px;
     }

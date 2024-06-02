@@ -55,10 +55,10 @@
 
             <ul class="fields__list fields__list_sort">
               <li class="fields__item">
-                <button class="fields__button">от&nbsp;большего</button>
+                <button class="fields__button" data-sort="down">от&nbsp;большего</button>
               </li>
               <li class="fields__item">
-                <button class="fields__button">от&nbsp;меньшего</button>
+                <button class="fields__button" data-sort="up">от&nbsp;меньшего</button>
               </li>
             </ul>
           </div>
@@ -82,18 +82,7 @@
             </button>
 
             <ul class="fields__list fields__list_filter">
-              <li class="fields__item">
-                <button class="fields__button">хочу&nbsp;прочитать</button>
-              </li>
-              <li class="fields__item">
-                <button class="fields__button">прочитал</button>
-              </li>
-              <li class="fields__item">
-                <button class="fields__button">читаю</button>
-              </li>
-              <li class="fields__item">
-                <button class="fields__button">не&nbsp;дочитал</button>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -370,7 +359,7 @@
                   src="about:blank"
                   alt="Превью изображения"
                 />
-                <input type="file" name="file" class="upload__file" accept="image/*" />
+                <input type="file" name="image" class="upload__file" accept="image/*" />
               </label>
             </div>
           </fieldset>
@@ -436,7 +425,7 @@
             <fieldset class="star ">
               <legend class="add__subtitle">Поставьте оценку</legend>
 
-              <!-- <div class="star__list">
+              <div class="star__list">
                 <input
                   class="star__radio"
                   type="radio"
@@ -477,7 +466,7 @@
                   value="1"
                 />
                 <label class="star__icon" for="star-rating-1"></label>
-              </div> -->
+              </div>
             </fieldset>
 
           </fieldset>

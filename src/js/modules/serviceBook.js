@@ -14,12 +14,80 @@ export const getBooks = async (id) => {
   }
 };
 
+export const searchBooks = async (search) => {
+  try {
+    const response = await fetch(`${API_URL}api/books/?search=${search}`);
+
+    if (!response.ok) {
+      throw new Error(`Ошибка при запросе книги с сервера: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getLabels = async () => {
   try {
     const response = await fetch(`${API_URL}api/label`);
 
     if (!response.ok) {
       throw new Error(`Ошибка при запросе label сервера: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const addBooks = async (data) => {
+  console.log("data: ", data);
+  try {
+    const response = await fetch(`${API_URL}api/books`, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Ошибка при запросе книги с сервера: ${response.statusText}`
+      );
+    }
+
+    return response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteBooks = async (id) => {
+  try {
+    const response = await fetch(`${API_URL}api/books/${id}`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error(`Ошибка при запросе книги с сервера: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editBooks = async (id, data) => {
+  console.log("data: ", data);
+  try {
+    const response = await fetch(`${API_URL}api/books/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Ошибка при запросе книги с сервера: ${response.status}`);
     }
 
     return await response.json();

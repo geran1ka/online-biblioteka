@@ -94,9 +94,29 @@
   &__button {
     background-color: $secondary;
     border-radius: 16px;
-    border: 0;
+    border: 1px solid transparent;
     padding: 8px;
     font-size: 12px;
     line-height: 1;
+    outline: none;
+    transition: background-color $transition, border-color $transition,
+      color $transition;
+
+    &:focus-visible {
+      border-color: $secondary;
+    }
+
+    &:hover {
+      background-color: $secondary-dark;
+      color: $light;
+    }
+
+    &:active {
+      border-color: $primary;
+    }
+
+    &_selected {
+      background-color: $primary;
+    }
   }
 }
